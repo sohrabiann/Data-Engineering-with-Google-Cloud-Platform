@@ -15,13 +15,13 @@
 bucket_name="assi3-data-bucket"
 
 gcloud sql export csv mysql-instance-source \
-gs://${bucket_name}/mysql_export/stations/20180101/stations.csv \
+gs://$bucket_name/mysql_export/stations_20180101.csv \
 --database=apps_db \
 --offload \
 --query='SELECT * FROM stations WHERE station_id <= 200;'
 
 gcloud sql export csv mysql-instance-source \
-gs://${bucket_name}/mysql_export/stations/20180102/stations.csv \
+gs://$bucket_name/mysql_export/stations_20180102.csv \
 --database=apps_db \
 --offload \
 --query='SELECT * FROM stations WHERE station_id <= 400;'
