@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-bucket_name=[your gcs bucket name]
+bucket_name="assi3-data-bucket"
 
 gcloud sql export csv mysql-instance-source \
 gs://$bucket_name/mysql_export/stations/20180101/stations.csv \
